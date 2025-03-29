@@ -1,3 +1,4 @@
+process.env.PORT="4000";
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = require("../config/constants");
 const users = [
