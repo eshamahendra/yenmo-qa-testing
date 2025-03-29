@@ -21,6 +21,9 @@ const handleAuth = (req, res) => {
     if (user.password !== password) {
       return res.status(401).json({ error: "Invalid credentials" });
     }
+    if (user.email !== email) {
+      return res.status(401).json({ error: "Invalid credentials" });
+    }
   } else {
     users.push({ email, password });
   }
